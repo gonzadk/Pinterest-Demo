@@ -1,0 +1,1 @@
+var galeryApp = angular.module('galeryApp', ['angularGrid', 'ngSanitize']);

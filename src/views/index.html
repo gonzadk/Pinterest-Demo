@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pinterest Demo</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+</head>
+
+<body id="mainApp" data-ng-app="galeryApp" data-ng-controller="indexCtrl">
+
+    <header class="header">
+        <div class="finder">
+            <input class="finder-input" type="text" name="" placeholder="Your Search Criteria Here" data-ng-model="searchField">
+        </div>
+    </header>
+    <main class="main">
+        <ul class="dynamic-grid" angular-grid="imageList" ag-grid-width="gridOptions.width" ag-gutter-size="gridOptions.gutterSize" ag-id="gallery">
+            <li data-ng-repeat="image in imageList" class="grid" data-ng-click="openWindow(image.url)"><img data-ng-src="assets/img/{{image.defaultImage}}" class="grid-img"> 
+                <div class="grid-content">
+                    <h3 data-ng-bind="image.title"></h3>
+                    <div id="image-{{$index}}" class="grid-description">
+                    <p data-ng-bind-html="image.description"></p>
+                        
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </main>
+    <footer class="footer"></footer>
+    <script src="assets/libs/angular.min.js"></script>
+    <script src="assets/libs/angular-animate.js"></script>
+    <script src="assets/libs/angular-sanitize.min.js"></script>
+    <script src="assets/libs/angulargrid.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/imageService.js"></script>
+    <script>
+    </script>
+</body>
+</html>

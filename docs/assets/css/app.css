@@ -80,15 +80,20 @@ header.header .finder {
   background: none; }
 
 header.header .finder .finder-input {
-  width: 50%;
-  border: 1px solid #004986;
+  -webkit-box-shadow: 0px 1px 2px 0px #909090;
+          box-shadow: 0px 1px 2px 0px #909090;
+  color: #656565;
+  font-weight: 600;
+  width: 98%;
   margin: 6px;
   padding: 4px;
   height: 2em;
-  /*      background: none;*/
-  background: #fff;
   font-size: 1.2em;
-  float: left; }
+  float: left;
+  border: none;
+  border-radius: 7px;
+  background: #d8d8d8;
+  padding-left: 10px; }
 
 .header .icons {
   float: right;
